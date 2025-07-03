@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "BOJ Stat Hider",
+  "version": "1.0",
+  "description": "백준 온라인 저지(BOJ)에서 맞힌 사람 수, 정답률 등을 가려서 난이도를 알 수 없게 합니다. 대회 연습을 위해 사용하세요.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.acmicpc.net/problem/*",
+        "https://www.acmicpc.net/problemset*",
+        "https://www.acmicpc.net/step/*",
+        "https://www.acmicpc.net/category/detail/*",
+        "https://www.acmicpc.net/workbook/view/*",
+        "https://www.acmicpc.net/group/workbook/view/*/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
